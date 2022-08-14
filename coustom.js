@@ -89,6 +89,12 @@ function alarmSet() {
     getTime(hhh, mmh, ap);
 }
 
+// ---- pause alerm-----
 function paseAlarm() {
     music.pause();
+}
+
+// ----- cencle alerm---
+function cancelOverflow() {
+    setAl.style.display = 'none';
 }
