@@ -10,7 +10,11 @@ let getTimeM = document.getElementById('getTimeMin');
 let setNone = document.getElementById('none');
 let select = document.getElementById('cars');
 let getAmPm = document.getElementById('alarmAmPm');
+let cencleAlarm = document.getElementById('alermCencle');
+let aH = document.getElementById('alarmH');
+let aM = document.getElementById('alarmM');
 
+// ---- time show 
 function getTime(hhh, mmh, ap) {
 
     let date = new Date();
@@ -18,8 +22,6 @@ function getTime(hhh, mmh, ap) {
     let mm = date.getMinutes();
     let ss = date.getSeconds();
     let session = 'am';
-
-
 
     // --- confirm time is 12 hour
     if (hh > 12) {
@@ -29,6 +31,12 @@ function getTime(hhh, mmh, ap) {
         hh = hh + 12;
     }
     // ------ alerm time set 
+
+    // if (can == 'stop') {
+    //     hhh = 'no';
+    //     mmh = 'no';
+    //     ap = 'no';
+    // }
 
     if (hh == hhh && mm == mmh && ap == session) {
         pausTime.style.display = 'block';
@@ -55,7 +63,7 @@ function alarmSetxs() {
 
 }
 
-
+// ---- alerm set 
 function alarmSet() {
     let hhh2 = +getTimeH.value;
     let mmh2 = +getTimeM.value;
@@ -81,14 +89,17 @@ function alarmSet() {
             return
         }
     }
-
-    document.getElementById('alarmH').innerHTML = 'Hour: ' + hhh;
-    document.getElementById('alarmM').innerHTML = 'Minute: ' + mmh;
+    aH.innerHTML = 'Hour: ' + hhh;
+    aM.innerHTML = 'Minutes: ' + mmh;
     getAmPm.innerHTML = 'session: ' + ap;
     setAl.style.display = 'none';
+    cencleAlarm.style.display = 'block';
     getTime(hhh, mmh, ap);
 }
 
+function refreshPage() {
+    window.location.reload();
+}
 // ---- pause alerm-----
 function paseAlarm() {
     music.pause();
