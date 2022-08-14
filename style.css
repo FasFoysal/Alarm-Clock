@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.clock {
+    width: 350px;
+    margin: auto;
+    padding: 80px;
+}
+
+h1 {
+    color: blue;
+    font-size: 70px;
+}
+
+input {
+    padding: 6px;
+    border: 3px solid greenyellow;
+    margin: 20px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input:focus {
+    padding: 5px;
+    border: 4px solid rgb(161, 212, 85);
+    margin: 18px 4px;
+    border-radius: 2px;
+}
+
+#alPuse {
+    display: none;
+}
+
+.pause {
+    background: url('http://www.alexkatz.me/codepen/images/pause.png')
+}
+
+
+/* ---alerm set page  */
+
+.alermSet {
+    position: absolute;
+    z-index: 100;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 650px;
+    padding: 20px;
+    height: 250px;
+    top: 50px;
+    left: 250px;
+    color: wheat;
+    display: none;
+}
+
+.animate {
+    animation: animatetop 0.4s
+}
+
+@keyframes animatetop {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: .5
+    }
+}

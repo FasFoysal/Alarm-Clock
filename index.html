@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Alarm Clock</title>
+</head>
+
+<body>
+    <!-- alarm make -->
+    <div class="clock">
+        <h1 id="time"></h1>
+        <input onclick="alarmSetxs()" type="button" value="Set Alarm">
+        <input id="alPuse" onclick="paseAlarm()" type='button' value="Alarm pase">
+
+
+        <h4 id="alarmH"></h4>
+        <h4 id="alarmM"></h4>
+        <h4 id="alarmAmPm"></h4>
+        <!-- alerm set -->
+    </div>
+
+    <div id="setAl" class="alermSet animate">
+        Hour: <input id="getTimeHour" type="text" placeholder="Set hour" required>
+        <br> Minute: <input id="getTimeMin" type="text" placeholder="Set Minute" required>
+        <br> AM or PM: <select id="cars">
+        <option value="am">AM</option>
+        <option value="pm">PM</option>
+      </select>
+        <br>
+        <input id="ok" onclick="alarmSet()" type="button" value="OK">
+        <p style="text-align:center;">After set alerm if you reload the page, alarm not working</p>
+    </div>
+    <!-- ----link js---- -->
+    <script src="coustom.js"></script>
+</body>
+
+</html>
